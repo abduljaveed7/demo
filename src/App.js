@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import Headers from "./Header"
+let numbers=[{
+  age:25,
+  name:"javeed",
+  place:"pedana",
+  company:"ibm"
+},
+{
+  age:26,
+  name:"abdul",
+  place:"mtm",
+  company:"ey"
+}]
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    numbers.map((number)=>{
+      return <Headers  key={number.company} Age={number.age} name={number.name} place={number.place} company={number.company} />
+     
+    })
+   
+  )
 }
+  
 
-export default App;
+
+
+  
+
+
+
+
+export default App
